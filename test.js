@@ -29,7 +29,6 @@ function test(sort) {
       assert.deepEqual(sort([0, 0, 0, 0, 0, -1], desc), [0, 0, 0, 0, 0, -1]);
     });
 
-
     it('should work with ascending arrays of objects', function() {
       function comparePets(a, b) {
         return a.age - b.age;
@@ -47,4 +46,3 @@ function test(sort) {
     });
   });
 }
-
