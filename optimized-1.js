@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * The counter used for performance mesurement.
+ * The counter used for performance measurement.
  */
 // var counter = require('./counter');
 
