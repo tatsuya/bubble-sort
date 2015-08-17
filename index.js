@@ -10,7 +10,7 @@ function comparator(a, b) {
 }
 
 module.exports = function(arr, cmp) {
-  var cmp = cmp || comparator;
+  cmp = cmp || comparator;
   var swapped;
   do {
     swapped = false;

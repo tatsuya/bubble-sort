@@ -16,7 +16,7 @@ function comparator(a, b) {
  * time.
  */
 module.exports = function(arr, cmp) {
-  var cmp = cmp || comparator;
+  cmp = cmp || comparator;
   var length = arr.length;
   var swapped;
   do {
