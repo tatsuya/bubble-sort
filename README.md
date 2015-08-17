@@ -8,7 +8,6 @@ Ascending order.
 
 ```js
 var sort = require('bubble-sort');
-
 sort([3, 1, 4, 1, 5, 9, 2, 6, 5, 4]);
 // => [1, 1, 2, 3, 4, 4, 5, 5, 6, 9]
 ```
@@ -16,6 +15,7 @@ sort([3, 1, 4, 1, 5, 9, 2, 6, 5, 4]);
 Descending order.
 
 ```js
+var sort = require('bubble-sort');
 function desc(a, b) {
   return b - a;
 }
@@ -26,6 +26,7 @@ sort([4, 2, 2, 6, 1, 3], desc);
 Sort objects.
 
 ```js
+var sort = require('bubble-sort');
 function comparePets(a, b) {
   return a.age - b.age;
 }
