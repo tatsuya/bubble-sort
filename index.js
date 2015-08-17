@@ -15,9 +15,9 @@ module.exports = function(arr, cmp) {
   do {
     swapped = false;
     for (var i = 1; i < arr.length; i++) {
-      // counter.compared();
+      // counter.incr('compared');
       if (cmp(arr[i], arr[i - 1]) < 0) {
-        // counter.swapped();
+        // counter.incr('swapped');
         var temp = arr[i];
         arr[i] = arr[i - 1];
         arr[i - 1] = temp;
@@ -26,5 +26,6 @@ module.exports = function(arr, cmp) {
     }
   } while (swapped);
   // counter.print();
+  // counter.reset();
   return arr;
 }

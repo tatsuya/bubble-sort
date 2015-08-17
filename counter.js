@@ -5,21 +5,36 @@
  * comparison/swap of two numbers in the array.
  */
 var counter = {
-  _comparisonCount: 0,
-  _swapCount: 0,
-  compared: function() {
-    this._comparisonCount++;
+  incr: function(key) {
+    if (this[key] === undefined) {
+      this[key] = 0;
+    }
+    this[key]++;
   },
-  swapped: function() {
-    this._swapCount++;
+  reset: function() {
+    var keys = this._keys();
+    for (var i = 0; i < keys.length; i++) {
+      var key = keys[i];
+      delete this[key];
+    }
   },
   print: function() {
-    console.log('comparisons: %d, swaps: %d', this._comparisonCount, this._swapCount);
-    this._reset();
+    var keys = this._keys();
+    var obj = {};
+    for (var i = 0; i < keys.length; i++) {
+      var key = keys[i];
+      obj[key] = this[key];
+    }
+    console.log(obj);
   },
-  _reset: function() {
-    this._comparisonCount = 0;
-    this._swapCount = 0;
+  _keys: function() {
+    var keys = [];
+    for (var key in this) {
+      if (typeof this[key] !== 'function') {
+        keys.push(key);
+      }
+    }
+    return keys;
   }
 };
 
