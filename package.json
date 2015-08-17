@@ -1,0 +1,17 @@
+{
+  "name": "bubble-sort",
+  "version": "0.0.1",
+  "description": "Bubble Sort implementation",
+  "private": true,
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  },
+  "author": {
+    "name": "Tatsuya Oiwa",
+    "email": "tatsuyaoiw@gmail.com"
+  },
+  "license": "MIT"
+}
